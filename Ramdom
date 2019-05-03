@@ -10,4 +10,11 @@ contract Random {
     function  getsender () public constant returns (address){
        return msg.sender;
     }
+    function  randNow (uint min,uint max) public constant returns (uint){
+       return (getNow()%(max - min))+min;
+    }
+     function  random (uint min,uint max) public constant returns (uint){
+         bytes32 hash = keccak256(getNow());
+       return (uint(hash)%(max - min))+min;
+}
 }
