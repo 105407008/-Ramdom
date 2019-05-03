@@ -1,0 +1,13 @@
+pragma solidity ^0.4.21;
+
+contract Random {
+    function getBlockMum () public constant returns (uint){
+       return block.number;
+    }
+    function getNow () public constant returns (uint){
+       return now;
+    }
+    function  getsender () public constant returns (address){
+       return msg.sender;
+    }
+}
